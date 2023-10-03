@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+
+    <!-- Imports -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+    <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/plotly-2.4.2.min.js') }}"></script>
+</head>
+<body>
+    <h1> Trabalho 1 - Rede de Computadores</h1>
+
+    <div id="menu">
+
+        <h2> Menu </h2>
+        <div>
+            <label for="profileSelect">Select Profile:</label>
+            <select id="profileSelect" onchange="handleProfileChange(this)">
+                {% for i in range(60) %}
+                    <option value="{{ i }}">Profile {{ i }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div>
+            <label for="dataSizeSelect">Select Dataset Size:</label>
+            <select id="dataSizeSelect" onchange="handleSizeChange(this)">
+                {% for i in range(50, 501, 50) %}
+                    <option value="{{ i }}">Size {{ i }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+
+    <div id="Graph">
+        <div id="Plot"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

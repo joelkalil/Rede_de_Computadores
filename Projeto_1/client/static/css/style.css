@@ -1,0 +1,49 @@
+/* ------------------------------------------ Painel ------------------------------------------- */
+
+body h1:first-child {
+    color:rgb(0, 0, 0);
+    font-size: 32px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family:"Segoe print", Arial, Helvetica, sans-serif;
+    font-weight:lighter;
+    border-radius: 10px;
+    text-align:center;
+    display:block;
+    position: relative;
+    padding:10px;
+    margin:16px;
+    width: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 25px;
+    margin: 0 40% 0 40%;
+    padding: 10px;
+}
+
+#menu > div {
+    padding: 5px;
+}
+
+select {
+    padding: 5px; /* Add padding for better spacing */
+    font-size: 16px; /* Adjust font size as needed */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 4px; /* Add rounded corners */
+    background-color: #fff; /* Set background color */
+    color: #555; /* Set font color */
+    width: 200px; /* Set a specific width if desired */
+    margin: 5px 0; /* Add margin for spacing */
+}
+
+/* Style on hover/focus */
+select:hover, select:focus {
+    border-color: #999; /* Change border color on hover/focus */
+}
